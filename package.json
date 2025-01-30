@@ -26,6 +26,8 @@
     "vite-plugin-html": "^3.2.2"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.5.1",
+    "@emotion/react": "^11.14.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
