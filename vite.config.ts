@@ -1,20 +1,16 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
-import {createHtmlPlugin} from "vite-plugin-html";
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { createHtmlPlugin } from "vite-plugin-html";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    createHtmlPlugin(),
-  ],
+  plugins: [react(), tailwindcss(), createHtmlPlugin()],
   css: {
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler'
-      }
-    }
+        api: "modern-compiler",
+      },
+    },
   },
   build: {
     cssCodeSplit: true,
@@ -24,11 +20,11 @@ export default defineConfig({
     sourcemap: false,
   },
   esbuild: {
-    legalComments: 'none',
+    legalComments: "none",
     minifySyntax: true,
     minifyWhitespace: true,
     minifyIdentifiers: true,
-    platform: 'browser',
-    include: './src/**/*.{js,ts,jsx,tsx,css,json,text,base64,dataurl,file,binary}',
-  }
-})
+    platform: "browser",
+    include: "./src/**/*.{js,ts,jsx,tsx,css,json,text,base64,dataurl,file,binary}",
+  },
+});
