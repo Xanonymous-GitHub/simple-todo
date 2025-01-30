@@ -28,10 +28,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
+      - name: Install dependencies
+        run: 'bun --bun install --frozen-lockfile'
       - name: Check format
         run: 'bun --bun run lint'
       - name: Production Build
-        run: 'bun --bun install --frozen-lockfile && bun --bun run build'
+        run: 'bun --bun run build'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
