@@ -1,5 +1,5 @@
-@use "tailwindcss/index.css";
+@import "tailwindcss";
 
-body, #root {
-  height: 100dvh;
+#root {
+  @apply h-dvh bg-white dark:bg-gray-800;
 }
