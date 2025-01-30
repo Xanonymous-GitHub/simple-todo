@@ -1,0 +1,5 @@
+@use "tailwindcss/index.css";
+
+body, #root {
+  height: 100dvh;
+}
